@@ -12,7 +12,7 @@ import numpy as np
 import cv2
 
 import caffe
-from caffe.proto import cafee_pb2
+from caffe.proto import caffe_pb2
 import lmdb
 
 # Size of images
@@ -32,7 +32,7 @@ def transform_img(img, img_width=IMAGE_WIDTH, img_height=IMAGE_HEIGHT):
 
 def make_datum(img, label):
     # image is numpy.ndarray format. BGR instead of RGB
-    return caffe_pb2.Datub(
+    return caffe_pb2.Datum(
         channels=3,
         width=IMAGE_WIDTH,
         height=IMAGE_HEIGHT,
@@ -59,8 +59,10 @@ def db_write(train_data, in_db, validation_write=False):
 
 # MAIN
 
-train_lmdb = '/user/jonathansmith/source/caffe-and-dogs/input/train_lmdb'
-validation_lmdb = '/user/jonathansmith/source/caffe-and-dogs/input/train_lmdb'
+train_lmdb = '/home/ec2-user/caffes-and-dogs/input/train_lmdb'
+validation_lmdb = '/home/ec2-user/caffes-and-dogs/input/validation_lmdb'
+#train_lmdb = '/user/jonathansmith/source/caffe-and-dogs/input/train_lmdb'
+#validation_lmdb = '/user/jonathansmith/source/caffe-and-dogs/input/validation_lmdb'
 
 os.system('rm -rf ' + train_lmdb)
 os.system('rm -rf ' + validation_lmdb)
