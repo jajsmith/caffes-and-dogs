@@ -22,8 +22,10 @@ caffe.set_mode_gpu()
 
 parser = argparse.ArgumentParser(description = 'Process arguments')
 parser.add_argument('-i', nargs = '?', const = 5000, default = 5000)
+parser.add_argument('-t', nargs = '?', const = 'test1', default = 'test1')
 args = parser.parse_args()
 
+test_folder = str(args.t)
 model_iterations = str(args.i)
 
 print 'model_iters: ' + model_iterations
@@ -90,7 +92,8 @@ print 'Caffe is ready to predict.'
 
 print 'Predicting whether each image has a cat or dog in it...'
 
-test_img_paths = [img_path for img_path in glob.glob(REPOSITORY_DIR + 'input/test1/*jpg')]
+test_folder_path = REPOSITORY_DIR + 'input/' + test_folder + '/'
+test_img_paths = [img_path for img_path in glob.glob(test_folder_path + '*jpg')]
 
 test_ids = []
 preds = []
