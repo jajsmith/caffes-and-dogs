@@ -21,7 +21,7 @@ caffe.set_mode_gpu()
 # Arguments 
 
 parser = argparse.ArgumentParser(description = 'Process arguments')
-parser.add_argument('-i', nargs = '?', const = 5000, default = 5000)
+parser.add_argument('-i', nargs = '?', const = 10000, default = 10000)
 parser.add_argument('-t', nargs = '?', const = 'test1', default = 'test1')
 args = parser.parse_args()
 
@@ -73,7 +73,7 @@ mean_array = np.asarray(mean_blob.data, dtype=np.float32).reshape(
 
 # Read model arch and trained model's weights
 
-model_architecture_path = REPOSITORY_DIR + 'caffe_models/caffe_model_1/caffenet_deploy_1.prototxt'
+model_architecture_path = REPOSITORY_DIR + 'caffe_models/caffe_model_1/caffe_prediction_model_1.prototxt'
 model_weights_path = REPOSITORY_DIR + 'caffe_models/caffe_model_1/caffe_model_1_iter_' + model_iterations + '.caffemodel'
 
 net = caffe.Net(model_architecture_path, model_weights_path, caffe.TEST)
