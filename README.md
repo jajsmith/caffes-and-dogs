@@ -20,8 +20,9 @@ See how training improved against the validation set over time:
 
 See submission CSVs in the `input/` folder named after each test dataset. For example the final model was able to classify the following images:
 
-| Image                                   | Dataset  | Classification |
-| --------------------------------------- | -------- | --------------:|
-| ![cat 000](input/test_skoltech/000.jpg) | Skoltech | Cat            |
-| ![dog 070](input/test_skoltech/070.jpg) | Skoltech | Dog            |
-| ![cat 032](input/test_skoltech/032.jpg) | Skoltech | Cat            |
+| Image                                   | Dataset  | Classification | Correct |
+| --------------------------------------- | -------- | :-------------:| ------- |
+| ![cat 000](input/test_skoltech/000.jpg) | Skoltech | Cat            | yes |
+| ![dog 250](input/test_skoltech/250.jpg) | Skoltech | Dog            | yes |
+| ![cat 032](input/test_skoltech/032.jpg) | Skoltech | Cat            | yes |
+| ![dog 070](input/test_skoltech/070.jpg) | Skoltech | Dog            | no |
