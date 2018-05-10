@@ -10,7 +10,7 @@ layer {
     transform_param {
         mirror: true
         crop_size: 227
-        mean_file: "/home/ec2-user/caffes-and-dogs/input/mean.binaryproto"
+        mean_file: "/mnt/git/caffes-and-dogs/input/mean.binaryproto"
     }
 # mean pixel / channel-wise mean instead of mean image
 # transform_param {
@@ -21,7 +21,7 @@ layer {
 #     mirror: true
 # }
     data_param {
-        source: "/home/ec2-user/caffes-and-dogs/input/train_lmdb"
+        source: "/mnt/git/caffes-and-dogs/input/train_lmdb"
         batch_size: 256
         backend: LMDB
     }
@@ -38,7 +38,7 @@ layer {
     transform_param {
         mirror: false
         crop_size: 227
-        mean_file: "/home/ec2-user/caffes-and-dogs/input/mean.binaryproto"
+        mean_file: "/mnt/git/caffes-and-dogs/input/mean.binaryproto"
     }
 # mean pixel / channel-wise mean instead of mean image
 # transform_param {
@@ -49,7 +49,7 @@ layer {
 #     mirror: true
 # }
     data_param {
-        source: "/home/ec2-user/caffes-and-dogs/input/validation_lmdb"
+        source: "/mnt/git/caffes-and-dogs/input/validation_lmdb"
         batch_size: 50
         backend: LMDB
     }
