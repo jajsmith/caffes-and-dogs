@@ -59,8 +59,8 @@ def db_write(train_data, in_db, validation_write=False):
 
 # MAIN
 
-train_lmdb = '/home/ec2-user/caffes-and-dogs/input/train_lmdb'
-validation_lmdb = '/home/ec2-user/caffes-and-dogs/input/validation_lmdb'
+train_lmdb = '/mnt/git/caffes-and-dogs/input/train_lmdb'
+validation_lmdb = '/mnt/git/caffes-and-dogs/input/validation_lmdb'
 #train_lmdb = '/user/jonathansmith/source/caffe-and-dogs/input/train_lmdb'
 #validation_lmdb = '/user/jonathansmith/source/caffe-and-dogs/input/validation_lmdb'
 
